@@ -1,3 +1,44 @@
+<?php
+
+function sanitizeFormPassword($inputText) {
+    $inputText = strip_tags($inputText); //security
+	return $inputText; //remove spaces
+}
+function sanitizeFormUsername($inputText) {
+
+	$inputText = strip_tags($inputText); //security
+	$inputText = str_replace(" ", "", $inputText);
+	return $inputText; //remove spaces
+}
+
+function sanitizeFormString($inputText) {
+	$inputText = strip_tags($inputText); //security
+	$inputText = str_replace(" ", "", $inputText); //remove spaces
+	$inputText = ucfirst(strtolower($inputText));
+	return $inputText; //remove spaces
+}
+if(isset($_POST['loginButton'])) {
+	//login buttonw as pressed
+
+
+}
+
+if(isset($_POST['registerButton'])) {
+	//login buttonw as pressed
+	$username = sanitizeFormUsername($_POST['username']);
+	$firstName = sanitizeFormString($_POST['firstName']);
+	$lastName = sanitizeFormString($_POST['lastName']);
+	$email = sanitizeFormString($_POST['email']);
+	$email2 = sanitizeFormString($_POST['email2']);
+	$password = sanitizeFormPassword($_POST['password']);
+	$password2 = sanitizeFormPassword($_POST['password2']);
+}
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -42,7 +83,7 @@
 			<!-- lastname -->
 			<p>
 				<label for="lastName">Lastname</label>
-				<input id="lastName" type="lastName" name="email" placeholder="e.g. Arora" required>
+				<input id="lastName" type="lastName" name="lastName" placeholder="e.g. Arora" required>
 			</p>
 			<!-- email -->
 			<p>
