@@ -1,42 +1,10 @@
 <?php
-
-function sanitizeFormPassword($inputText) {
-    $inputText = strip_tags($inputText); //security
-	return $inputText; //remove spaces
-}
-function sanitizeFormUsername($inputText) {
-
-	$inputText = strip_tags($inputText); //security
-	$inputText = str_replace(" ", "", $inputText);
-	return $inputText; //remove spaces
-}
-
-function sanitizeFormString($inputText) {
-	$inputText = strip_tags($inputText); //security
-	$inputText = str_replace(" ", "", $inputText); //remove spaces
-	$inputText = ucfirst(strtolower($inputText));
-	return $inputText; //remove spaces
-}
-if(isset($_POST['loginButton'])) {
-	//login buttonw as pressed
-
-
-}
-
-if(isset($_POST['registerButton'])) {
-	//login buttonw as pressed
-	$username = sanitizeFormUsername($_POST['username']);
-	$firstName = sanitizeFormString($_POST['firstName']);
-	$lastName = sanitizeFormString($_POST['lastName']);
-	$email = sanitizeFormString($_POST['email']);
-	$email2 = sanitizeFormString($_POST['email2']);
-	$password = sanitizeFormPassword($_POST['password']);
-	$password2 = sanitizeFormPassword($_POST['password2']);
-}
+	include("includes/classes/Account.php");
+	$account = new Account();
+	include("includes/handlers/register-handler.php");
+	include("includes/handlers/login-handler.php");
 
 ?>
-
-
 
 
 <!DOCTYPE html>
@@ -71,22 +39,29 @@ if(isset($_POST['registerButton'])) {
 			<h2>Create your free account</h2>
 			<!--username-->
 			<p>
+				<?php echo $account->getError("Your username must be between 5 and 25 characters");?>
 				<label for="username">Username</label>
 				<input id="username" type="text" name="username" placeholder="e.g. manuarora" required>
 			</p>
 
 			<!--Firstname-->
 			<p>
+				<?php echo $account->getError("Your firstname must be between 2 and 25 characters");?>
+
 				<label for="firstName">Firstname</label>
 				<input id="firstName" type="text" name="firstName" placeholder="e.g. Manu" required>
 			</p>
 			<!-- lastname -->
 			<p>
+				<?php echo $account->getError("Your lastname must be between 2 and 25 characters");?>
+
 				<label for="lastName">Lastname</label>
 				<input id="lastName" type="lastName" name="lastName" placeholder="e.g. Arora" required>
 			</p>
 			<!-- email -->
 			<p>
+				<?php echo $account->getError("Your emails don't match");?>
+				<?php echo $account->getError("Email is Invalid");?>
 				<label for="email">Email</label>
 				<input id="email" type="email" name="email" placeholder="e.g. arora@gmail.com" required>
 			</p>
@@ -99,6 +74,9 @@ if(isset($_POST['registerButton'])) {
 
 			<!-- password -->
 			<p>	
+				<?php echo $account->getError("Your passwords don't match");?>
+				<?php echo $account->getError("Your password can only contain numbers and letters");?>
+				<?php echo $account->getError("Your password must be of appropriate length");?>
 				<label for="password">Password</label>
 				<input id="password" type="password" name="password" 
 				placeholder="your password"required>
