@@ -1,8 +1,17 @@
 <?php
+	include("includes/config.php");
 	include("includes/classes/Account.php");
+	include("includes/classes/Constants.php");
+
 	$account = new Account();
 	include("includes/handlers/register-handler.php");
 	include("includes/handlers/login-handler.php");
+
+	function getInputValue($name) {
+		if(isset($_POST[$name])) {
+			echo $_POST[$name];
+		}
+	}
 
 ?>
 
@@ -39,47 +48,47 @@
 			<h2>Create your free account</h2>
 			<!--username-->
 			<p>
-				<?php echo $account->getError("Your username must be between 5 and 25 characters");?>
+				<?php echo $account->getError(Constants::$usernameCharacters);?>
 				<label for="username">Username</label>
-				<input id="username" type="text" name="username" placeholder="e.g. manuarora" required>
+				<input id="username" type="text" name="username" placeholder="e.g. manuarora"  value="<?php getInputValue('username') ?>" required>
 			</p>
 
 			<!--Firstname-->
 			<p>
-				<?php echo $account->getError("Your firstname must be between 2 and 25 characters");?>
+				<?php echo $account->getError(Constants::$firstNameCharacters);?>
 
 				<label for="firstName">Firstname</label>
-				<input id="firstName" type="text" name="firstName" placeholder="e.g. Manu" required>
+				<input id="firstName" type="text" name="firstName" placeholder="e.g. Manu" value="<?php getInputValue('firstName') ?>" required>
 			</p>
 			<!-- lastname -->
 			<p>
-				<?php echo $account->getError("Your lastname must be between 2 and 25 characters");?>
+				<?php echo $account->getError(Constants::$lastNameCharacters);?>
 
 				<label for="lastName">Lastname</label>
-				<input id="lastName" type="lastName" name="lastName" placeholder="e.g. Arora" required>
+				<input id="lastName" type="lastName" name="lastName" placeholder="e.g. Arora" value="<?php getInputValue('lastName') ?>" required>
 			</p>
 			<!-- email -->
 			<p>
-				<?php echo $account->getError("Your emails don't match");?>
-				<?php echo $account->getError("Email is Invalid");?>
+				<?php echo $account->getError(Constants::$emailsDoNotMatch);?>
+				<?php echo $account->getError(Constants::$emailInvalid);?>
 				<label for="email">Email</label>
-				<input id="email" type="email" name="email" placeholder="e.g. arora@gmail.com" required>
+				<input id="email" type="email" name="email" placeholder="e.g. arora@gmail.com" value="<?php getInputValue('email') ?>" required>
 			</p>
 			<!-- confirm email -->
 			<p>
 				<label for="email2">Comfirm email</label>
-				<input id="email2" type="email" name="email2" placeholder="e.g. arora@gmail.com" required>
+				<input id="email2" type="email" name="email2" placeholder="e.g. arora@gmail.com" value="<?php getInputValue('email2') ?>" required>
 			</p>
 
 
 			<!-- password -->
 			<p>	
-				<?php echo $account->getError("Your passwords don't match");?>
-				<?php echo $account->getError("Your password can only contain numbers and letters");?>
-				<?php echo $account->getError("Your password must be of appropriate length");?>
+				<?php echo $account->getError(Constants::$passwordsDoNotMatch);?>
+				<?php echo $account->getError(Constants::$passwordNotAlphanumeric);?>
+				<?php echo $account->getError(Constants::$passwordCharacters);?>
 				<label for="password">Password</label>
 				<input id="password" type="password" name="password" 
-				placeholder="your password"required>
+				placeholder="your password" required>
 			</p>
 
 
