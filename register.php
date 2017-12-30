@@ -19,11 +19,38 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 	<title>Welcome to Geet!</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/register.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!--register.js-->
+	<script src="assets/js/register.js"></script>
+
 </head>
 <body>
 
+	<?php
+		if(isset($_POST['registerButton'])) {
+
+			echo '<script>
+					$(document).ready(function() {
+						$("#loginForm").hide();
+						$("#registerForm").show();
+					});
+				</script>';
+		}
+		else {
+			echo '<script>
+					$(document).ready(function() {
+						$("#loginForm").show();
+						$("#registerForm").hide();
+					});
+				</script>';
+		}
+	?>
+	
 	<div id="background">
 
 		<div id="loginContainer">
@@ -46,6 +73,9 @@
 					<button type="submit" name="loginButton">LOG IN
 					</button>
 					
+					<div class="hasAccountText">
+						<span id="hideLogin">Don't have an account yet? Signup here.</span>						
+					</div>
 				</form>
 
 
@@ -73,7 +103,7 @@
 						<?php echo $account->getError(Constants::$lastNameCharacters);?>
 
 						<label for="lastName">Lastname</label>
-						<input id="lastName" type="lastName" name="lastName" placeholder="e.g. Arora" value="<?php getInputValue('lastName') ?>" required>
+						<input id="lastName" type="text" name="lastName" placeholder="e.g. Arora" value="<?php getInputValue('lastName') ?>" required>
 					</p>
 					<!-- email -->
 					<p>
@@ -112,6 +142,10 @@
 
 					<button type="submit" name="registerButton">Signup
 					</button>
+
+					<div class="hasAccountText">
+						<span id="hideRegister">Already have an Account? Login here.</span>						
+					</div>
 					
 				</form>
 			</div>
