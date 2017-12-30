@@ -5,6 +5,10 @@ body {
 	height: 100%;
 }
 
+* {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #fff;
+}
 #nowPlayingBarContainer {
 	width: 100%;
 	background-color: #282828;
@@ -26,6 +30,11 @@ body {
 	min-width: 180px;
 }
 
+#nowPlayingRight {
+	position: relative;
+	margin-top: 16px;
+}
+
 
 #nowPlayingCenter {
 	width: 40%;
@@ -37,7 +46,7 @@ body {
 
 #nowPlayingBar .content {
 	width: 100%;
-
+	height: 57px;
 }
 
 .playerControls .buttons{
@@ -75,10 +84,63 @@ body {
 .playbackBar {
 	display: flex;
 }
+
 .progressBar {
 	width: 100%;
 	height: 12px;
 	display: inline-flex;
 	cursor: pointer;
 }
+.progressBarBg {
+	background-color: #404040;
+	height: 4px;
+	width: 100%;
+	border-radius: 2px;
+}
 
+.progress {
+	background-color: #a0a0a0;
+	height: 4px;
+	width: 0;
+	border-radius: 2px;
+}
+
+.playbackBar .progressBar {
+	margin-top: 3px;
+
+}
+
+
+#nowPlayingLeft .albumArtwork {
+	height: 100%;
+	max-width: 57px;
+	margin-right: 15px;
+	float: left;
+	background-size: cover;
+}
+
+#nowPlayingLeft .trackInfo {
+	display: table;
+
+}
+
+#nowPlayingLeft .trackInfo .trackName {
+	margin: 6px 0;
+	display: inline-block;
+	width: 100%;
+}
+
+#nowPlayingLeft .trackInfo .artistName span {
+	font-size: 12px;
+	color: #a0a0a0;	
+}
+
+.volumeBar {
+	width: 180px;
+	position: absolute;
+	right: 0;
+}
+
+.volumeBar .progressBar {
+	width: 125px;
+}
