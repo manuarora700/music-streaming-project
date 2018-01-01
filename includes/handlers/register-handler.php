@@ -1,28 +1,26 @@
-<?php
+<?php 
 
 function sanitizeFormPassword($inputText) {
-    $inputText = strip_tags($inputText); //security
-	return $inputText; //remove spaces
+	$inputText = strip_tags($inputText);
+	return $inputText;
 }
 
 function sanitizeFormUsername($inputText) {
-
-	$inputText = strip_tags($inputText); //security
+	$inputText = strip_tags($inputText);
 	$inputText = str_replace(" ", "", $inputText);
-	return $inputText; //remove spaces
+	return $inputText;
 }
 
 function sanitizeFormString($inputText) {
-	$inputText = strip_tags($inputText); //security
-	$inputText = str_replace(" ", "", $inputText); //remove spaces
+	$inputText = strip_tags($inputText);
+	$inputText = str_replace(" ", "", $inputText);
 	$inputText = ucfirst(strtolower($inputText));
-	return $inputText; //remove spaces
+	return $inputText;
 }
 
 
-
 if(isset($_POST['registerButton'])) {
-	//login buttonw as pressed
+	//Register button was pressed
 	$username = sanitizeFormUsername($_POST['username']);
 	$firstName = sanitizeFormString($_POST['firstName']);
 	$lastName = sanitizeFormString($_POST['lastName']);
@@ -33,14 +31,12 @@ if(isset($_POST['registerButton'])) {
 
 	$wasSuccessful = $account->register($username, $firstName, $lastName, $email, $email2, $password, $password2);
 
-	if($wasSuccessful) {
+	if($wasSuccessful == true) {
 		$_SESSION['userLoggedIn'] = $username;
 		header("Location: index.php");
 	}
 
-
 }
 
+
 ?>
-
-

@@ -3,20 +3,16 @@ body {
 	padding: 0;
 	margin: 0;
 	height: 100%;
-
 }
 
 #background {
 	background-color: #000;
-	background-image: url(../images/bg.jpg);
-	background-position: center;
-	background-size: cover;
-	display: table;
-	height: 100%;
-	width: 100%;
-
-
-
+    background-image: url(../images/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    display: table;
+    height: 100%;
+    width: 100%;
 }
 
 #loginContainer * {
@@ -34,35 +30,29 @@ body {
 	max-width: 1024px;
 }
 
-/*To change placeholder color -- Taken up from stack overflow*/
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-    color: #fff;
+    color:    #fff;
 }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-   color: #fff;
+   color:    #fff;
    opacity:  1;
 }
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
-   color: #fff;
+   color:    #fff;
    opacity:  1;
 }
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-   color: #fff;
+   color:    #fff;
 }
 ::-ms-input-placeholder { /* Microsoft Edge */
-   color: #fff;
-}
-
-::placeholder { /* Most modern browsers support this now. */
-   color: #fff;
+   color:    #fff;
 }
 
 #inputContainer {
-	width: 400px;
-	padding: 65px 14px;
-	float: left;
-	border-right: 1px solid #999;
-	margin-top: 34px;
+    width: 400px;
+    padding: 45px;
+    float: left;
+    border-right: 1px solid #999;
 }
 
 #inputContainer h2 {
@@ -73,32 +63,32 @@ body {
 #inputContainer input[type="email"],
 #inputContainer input[type="password"] {
 	display: block;
-	background-color: transparent;
-	border: 0;
-	border-bottom: 1px solid #fff;
-	height: 27px;
-	line-height: 27px;
-	width: 100%;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid #fff;
+    height: 27px;
+    line-height: 27px;
+    width: 100%;
 }
 
 #inputContainer label {
 	color: #a0a0a0;
-	font-size: 13px;
-	display: block;
-	margin-top: 15px;
+    font-size: 13px;
+    margin-top: 15px;
+    display: block;
 }
 
 #inputContainer button {
 	background-color: transparent;
-	border: 2px solid #fff;
-	border-radius: 250px;
-	color: #fff;
-	display: block;
-	font-size: 14px;
-	letter-spacing: 1px;
-	margin: 20px auto;
-	height: 41px;
-	width: 100%;
+    border: 2px solid #fff;
+    border-radius: 250px;
+    color: #fff;
+    display: block;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin: 20px auto;
+    height: 41px;
+    width: 100%;
 }
 
 #inputContainer button:hover {
@@ -107,47 +97,47 @@ body {
 
 .hasAccountText span {
 	font-weight: bold;
-	font-size: 12px;
-	cursor: pointer;
+    font-size: 12px;
+    cursor: pointer;
 }
 
 .hasAccountText {
 	text-align: center;
 }
+
 #registerForm,
 #loginForm {
 	display: none;
 }
 
 #loginText {
-	padding: 45px;
-	display: table-cell;
+    padding: 45px;
+    display: table-cell;
 }
 
 #loginText h1 {
-	color: #07d159; /*Spotify green color*/
-	font-size: 60px;
-	font-weight: bold;
+    color: #07d159;
+    font-size: 60px;
+    font-weight: bold;
 }
 
 #loginText h2 {
-	margin: 35px 0;
+    margin: 35px 0;
 }
 
 #loginText ul {
-	padding: 0;
+    padding: 0;
 }
 
 #loginText li {
-	font-size: 20px;
-	list-style-type: none;
-	padding: 15px 62px;
-	background: url(../images/icons/checkmark.png) no-repeat 0 0 ;
+    font-size: 20px;
+    list-style-type: none;
+    padding: 5px 30px;
+    background: url(../images/icons/checkmark.png) no-repeat 0 0;
 }
 
 #inputContainer .errorMessage {
-	color: #07d159;
-	font-size: 12px;
-	font-weight: bold;
-	display: block;
+    color: #07d159;
+    font-size: 12px;
+    display: block;
 }

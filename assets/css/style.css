@@ -1,55 +1,53 @@
-html,
-body {
+html, body {
 	padding: 0;
 	margin: 0;
 	height: 100%;
 }
 
-
 * {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #fff;
-	letter-spacing: 1px;
+    letter-spacing: 1px;
 }
 
 body {
-	background-color: #181818;
-	font-size: 14px;
-	min-width: 720px;
+    background-color: #181818;
+    font-size: 14px;
+    min-width: 720px;
 }
+
 #nowPlayingBarContainer {
 	width: 100%;
-	background-color: #282828;
-	bottom: 0;
-	position: fixed;
-	min-width: 620px;
+    background-color: #282828;
+    bottom: 0;
+    position: fixed;
+    min-width: 620px;
 }
 
 #nowPlayingBar {
-	display: flex; /*YEAHHHHH!*/
-	height: 90px;
-	padding: 16px;
-	box-sizing: border-box;
+	display: flex;
+    height: 90px;
+    padding: 16px;
+    box-sizing: border-box;
 }
 
-#nowPlayingLeft, 
+#nowPlayingLeft,
 #nowPlayingRight {
 	width: 30%;
-	min-width: 180px;
+    min-width: 180px;
 }
 
 #nowPlayingRight {
 	position: relative;
-	margin-top: 16px;
+    margin-top: 16px;
 }
-
 
 #nowPlayingCenter {
 	width: 40%;
-	max-width: 700px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #nowPlayingBar .content {
@@ -57,19 +55,20 @@ body {
 	height: 57px;
 }
 
-.playerControls .buttons{
+.playerControls .buttons {
 	margin: 0 auto;
-	display: table;
+    display: table;
 }
 
 .controlButton {
 	background-color: transparent;
-	border: none;
-	vertical-align: middle;
+    border: none;
+    vertical-align: middle;
 }
+
 .controlButton img {
 	width: 20px;
-	height: 20px;
+    height: 20px;
 }
 
 .controlButton.play img,
@@ -84,9 +83,9 @@ body {
 
 .progressTime {
 	color: #a0a0a0;
-	font-size: 11px;
-	min-width: 40px;
-	text-align: center;
+    font-size: 11px;
+    min-width: 40px;
+    text-align: center;
 }
 
 .playbackBar {
@@ -95,58 +94,56 @@ body {
 
 .progressBar {
 	width: 100%;
-	height: 12px;
-	display: inline-flex;
-	cursor: pointer;
+    height: 12px;
+    display: inline-flex;
+    cursor: pointer;
 }
+
 .progressBarBg {
 	background-color: #404040;
-	height: 4px;
-	width: 100%;
-	border-radius: 2px;
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
 }
 
 .progress {
 	background-color: #a0a0a0;
-	height: 4px;
-	width: 0;
-	border-radius: 2px;
+    height: 4px;
+    width: 0;
+    border-radius: 2px;
 }
 
 .playbackBar .progressBar {
 	margin-top: 3px;
-
 }
-
 
 #nowPlayingLeft .albumArtwork {
 	height: 100%;
-	max-width: 57px;
-	margin-right: 15px;
-	float: left;
-	background-size: cover;
+    max-width: 57px;
+    margin-right: 15px;
+    float: left;
+    background-size: cover;
 }
 
 #nowPlayingLeft .trackInfo {
 	display: table;
-
 }
 
 #nowPlayingLeft .trackInfo .trackName {
 	margin: 6px 0;
-	display: inline-block;
-	width: 100%;
+    display: inline-block;
+    width: 100%;
 }
 
 #nowPlayingLeft .trackInfo .artistName span {
 	font-size: 12px;
-	color: #a0a0a0;	
+    color: #a0a0a0;
 }
 
 .volumeBar {
 	width: 180px;
-	position: absolute;
-	right: 0;
+    position: absolute;
+    right: 0;
 }
 
 .volumeBar .progressBar {
@@ -160,208 +157,214 @@ body {
 
 #navBarContainer {
 	background-color: #000;
-	width: 220px;
-	height: 100vh;
-	position: fixed;
-	top: 0;
-	left: 0;
-
+    width: 220px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 .navBar {
-	padding: 25px;
-	display: flex;
-	flex-direction: column;
-	-ms-flex-direction: column;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    -ms-flex-direction: column;
 }
+
 .logo {
-	margin-bottom: 15px;
+    margin-bottom: 15px;
 }
 
 .logo img {
-	width: 32px;
+    width: 32px;
 }
 
 .navBar .group {
-	border-top: 1px solid #a0a0a0;
-	padding: 10px 0;
+    border-top: 1px solid #a0a0a0;
+    padding: 10px 0;
 }
 
 .navItem {
-	padding: 10px 0;
-	font-size: 14px;
-	font-weight: 700;
-	display: block;
-	letter-spacing: 1px;
-	position: relative;
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: 700;
+    display: block;
+    letter-spacing: 1px;
+    position: relative;
 }
 
 .navItemLink {
-	color: #a0a0a0;
-	text-decoration: none;
-}
-
-.navItemLink .icon {
-	position: absolute;
-	right: 0;
-	top: 4px;
-	width: 25px;
+    color: #a0a0a0;
+    text-decoration: none;
 }
 
 .navItemLink:hover {
-	color: #ffffff;
+    color: #ffffff;
+}
+
+.navItemLink .icon {
+    position: absolute;
+    right: 0;
+    top: 6px;
+    width: 25px;
 }
 
 #mainViewContainer {
-	margin-left: 220px;
-	padding-bottom: 90px;
-	width: calc(100% - 220px);
+    margin-left: 220px;
+    padding-bottom: 90px;
+    width: calc(100% - 220px);
 }
 
 #mainContent {
-	padding: 0 20px;
+    padding: 0 20px;
 }
 
 .pageHeadingBig {
-	padding: 20px;
-	text-align: center;
+    padding: 20px;
+    text-align: center;
 }
 
 .gridViewItem {
-	display: inline-block;
-	margin-right: 20px;
-	width: 29%;
-	max-width: 200px;
-	min-width: 150px;
-	margin-bottom: 20px;
+    display: inline-block;
+    margin-right: 20px;
+    width: 29%;
+    max-width: 200px;
+    min-width: 150px;
+    margin-bottom: 20px;
 }
 
 .gridViewItem img {
-	width: 100%;
+    width: 100%;
 }
 
 .gridViewInfo {
-	font-weight: 300;
-	text-align: center;
-	padding: 5px 0;
-	text-overflow: ellipsis;
-	overflow: hidden;
-	white-space: nowrap;
+    font-weight: 300;
+    text-align: center;
+    padding: 5px 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .gridViewItem a {
-	text-decoration: none;
+    text-decoration: none;
 }
 
 .entityInfo {
-	padding: 40px 0 10px 0;
-	display: inline-block;
-	width: 100%;
+    padding: 40px 0 10px 0;
+    display: inline-block;
+    width: 100%;
 }
 
 .entityInfo .leftSection {
-	width: 30%;
-	float: left;
-	max-width: 250px;
+    width: 30%;
+    float: left;
+    max-width: 250px;
 }
 
 .entityInfo .leftSection img {
-	width: 100%;
+    width: 100%;
 }
 
-
 .entityInfo .rightSection {
-	width: 70%;
-	float: left;
-	padding: 5px 10px 5px 40px;
-	box-sizing: border-box;
+    width: 70%;
+    float: left;
+    padding: 5px 10px 5px 40px;
+    box-sizing: border-box;
 }
 
 .entityInfo .rightSection h2 {
-	margin-top: 0px;
+    margin-top: 0px;
 }
 
 .entityInfo .rightSection p {
-	color: #939393;
-	font-weight: 200;
+    color: #939393;
+    font-weight: 200;
 }
 
 .tracklist {
-	padding: 0;
+    padding: 0;
 }
 
 .tracklistRow {
-	height: 40px;
-	padding: 15px 10px;
-	list-style: none;
+    height: 40px;
+    padding: 15px 10px;
+    list-style: none;
 }
 
 .tracklistRow span {
-	color: #939393;
-	font-weight: 200;
+    color: #939393;
+    font-weight: 200;
 }
 
 .tracklistRow:hover {
-	background-color: #282828;
+    background-color: #282828;
 }
 
 .tracklistRow .trackCount {
-	width: 8%;
-	float: left;
+    width: 8%;
+    float: left;
 }
 
 .tracklistRow .trackCount img {
-	width: 20px;
-	visibility: hidden;
-	position: absolute;
-	cursor: pointer;
+    width: 20px;
+    visibility: hidden;
+    position: absolute;
+    cursor: pointer;
 }
 
 .tracklistRow:hover .trackCount img {
-	visibility: visible;
+    visibility: visible;
 }
 
 .tracklistRow .trackCount span {
-	visibility: visible;
+    visibility: visible;
 }
+
 .tracklistRow:hover .trackCount span {
-	visibility: hidden;
+    visibility: hidden;
 }
 
 .tracklistRow .trackInfo {
-	width: 75%;
-	float: left;
-
+    width: 75%;
+    float: left;
 }
 
 .tracklistRow .trackInfo span {
-	display: block;
+    display: block;
 }
 
 .tracklistRow .trackOptions {
-	width: 5%;
-	float: left;
-	text-align: right;
+    width: 5%;
+    float: left;
+    text-align: right;
 }
 
-.tracklistRow .trackOptions img{
-	width: 15px;
-	visibility: hidden;
+.tracklistRow .trackOptions img {
+    width: 15px;
+    visibility: hidden;
 }
 
-.tracklistRow:hover .trackOptions img{
-	width: 15px;
-	visibility: visible;
+.tracklistRow:hover .trackOptions img {
+    visibility: visible;
 }
 
 .tracklistRow .trackDuration {
-	width: 12%;
-	float: left;
-	text-align: right;
+    width: 12%;
+    float: left;
+    text-align: right;
 }
 
 .tracklistRow .trackInfo .trackName {
-
-	color: #fff;
-	margin-bottom: 7px;
+    color: #fff;
+    margin-bottom: 7px;
 }
+
+
+
+
+
+
+
+
+

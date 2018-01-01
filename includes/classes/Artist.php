@@ -1,5 +1,6 @@
 <?php
 	class Artist {
+
 		private $con;
 		private $id;
 
@@ -13,6 +14,5 @@
 			$artist = mysqli_fetch_array($artistQuery);
 			return $artist['name'];
 		}
-
 	}
-?>	
+?>
