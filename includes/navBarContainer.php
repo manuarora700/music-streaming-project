@@ -23,7 +23,7 @@
 				<a href="yourMusic.php" class="navItemLink">Your music</a>
 			</div>
 			<div class="navItem">
-				<a href="profile.php" class="navItemLink">Sidhu Moosewala</a>
+				<a href="profile.php" class="navItemLink">Manu Arora</a>
 			</div>
 			
 		</div>
