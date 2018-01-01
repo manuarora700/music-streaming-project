@@ -69,10 +69,10 @@
 							<img class='optionsButton' src='assets/images/icons/more.png'/>
 
 
-						</div class='trackDuration'>
-							<span class='duration'>" . $albumSong->getDuration() . "</span>
-						<div>
+						</div>
 
+						<div class='trackDuration'>
+							<span class='duration'>" . $albumSong->getDuration() . "</span>
 						</div>
 
 					 </li>";
