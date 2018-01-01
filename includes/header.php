@@ -17,7 +17,7 @@ else {
 
 <html>
 <head>
-	<title>Welcome to Slotify!</title>
+	<title>Welcome to Geet! Your one stop destination for music</title>
 
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
