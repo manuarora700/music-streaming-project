@@ -20,6 +20,10 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+	<script src="assets/js/script.js"></script>
 	<title>Welcome to Geet! Your one stop destination for music</title>
 </head>
 <body>
