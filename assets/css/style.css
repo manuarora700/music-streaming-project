@@ -360,11 +360,24 @@ body {
     margin-bottom: 7px;
 }
 
+.artistInfo {
+    text-align: center;
+}
 
+.button {
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 10px;
+    background-color: transparent;
+    font-weight: 500;
+    letter-spacing: 2px;
+    border: 2px solid #fff;
+    border-radius: 500px;
+    padding: 15px;
+    min-width: 130px;
+}
 
-
-
-
-
-
-
+.button.green {
+    background-color: #2ebd59; /*spotify green*/
+    border-color: #2ebd59;
+}
