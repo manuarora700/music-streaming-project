@@ -437,3 +437,12 @@ input:focus {
     margin: 15px;
     display: block;
 }
+
+.buttonItems button {
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+.playlistContainer {
+    padding: 10px 0;
+}
