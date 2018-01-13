@@ -386,3 +386,8 @@ body {
     border-bottom: 1px solid #939393;
     margin-bottom: 20px;
 }
+
+.tracklistContainer h2,
+.gridViewContainer h2 {
+    text-align: center;
+}
