@@ -25,6 +25,29 @@ function openPage(url) {
 	$("body").scrollTop(0);
 	history.pushState(null, null, url);
 }
+
+function createPlaylist() {
+	console.log(userLoggedIn);
+	var popup = prompt("Please enter the name of the playlist");
+	if(popup != null) {
+
+		$.post("includes/handlers/ajax/createPlaylist.php", {name: popup, username: userLoggedIn})
+		.done(function(error) {
+
+			if(error != "") {
+				alert(error);
+				return;
+			}
+			//DONE IS THE PREFERRED WAY TO EXECUTE AJAX CALLS
+			//Do something when ajax returns
+			openPage("yourMusic.php");
+		});
+
+	}
+
+
+
+}
 function formatTime(seconds) {
 	var time = Math.round(seconds);
 	var minutes = Math.floor(time / 60);
