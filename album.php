@@ -88,8 +88,4 @@ $artist = $album->getArtist();
 
 	<input type="hidden" class="songId">
 	<?php echo Playlist::getPlaylistDropdown($con, $userLoggedIn->getUsername()); ?>
-	<div class="item">item 2</div>
-	<div class="item">item 3</div>
-
-
 </nav>
