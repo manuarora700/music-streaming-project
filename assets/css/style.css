@@ -492,3 +492,33 @@ input:focus {
 .userInfo h1 {
     text-align: center;
 }
+
+.userDetails {
+    padding: 20px;
+}
+
+.userDetails .container h2 {
+    text-align: center;
+}
+
+.userDetails .container input[type="text"],
+.userDetails .container input[type="password"],
+.userDetails .container button {
+    display:block;
+    margin: 16px auto;
+}
+.userDetails .container input[type="text"],
+.userDetails .container input[type="password"] {
+    height: 50px;
+    width: 100%;
+    background-color: #1f1f1f;
+    border: none;
+    font-size: 18px;
+    font-weight: 300px;
+    padding: 0 20px;
+}
+
+.userDetails .container .message {
+    color: #2ebd59;
+    font-weight: 300;
+}
