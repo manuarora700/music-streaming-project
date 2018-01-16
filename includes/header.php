@@ -22,6 +22,8 @@ else {
 <html>
 <head>
 	<title>Welcome to Geet! Your one stop destination for music</title>
+	<link rel="icon" href="../assets/images/icons/play.png" type="image/x-icon"/>
+	<link rel="shortcut icon" href="../assets/images/icons/play.png" type="image/x-icon"/>
 
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
