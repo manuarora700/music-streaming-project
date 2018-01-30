@@ -9,7 +9,8 @@ include("includes/includedFiles.php");
 		<h2>PLAYLISTS</h2>
 
 		<div class="buttonItems">
-<!-- s -->		</div>
+			<button class="button green" onclick="createPlaylist()">NEW PLAYLIST</button>
+		</div>
 
 
 		<?php
