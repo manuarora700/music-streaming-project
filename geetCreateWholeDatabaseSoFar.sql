@@ -102,17 +102,17 @@ INSERT INTO `genres` (`id`, `name`) VALUES
 -- Table structure for table `Songs`
 --
 
--- CREATE TABLE IF NOT EXISTS `Songs` (
--- `id` int(11) NOT NULL,
---   `title` varchar(250) NOT NULL,
---   `artist` int(11) NOT NULL,
---   `album` int(11) NOT NULL,
---   `genre` int(11) NOT NULL,
---   `duration` varchar(8) NOT NULL,
---   `path` varchar(500) NOT NULL,
---   `albumOrder` int(11) NOT NULL,
---   `plays` int(11) NOT NULL
--- ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=32 ;
+CREATE TABLE IF NOT EXISTS `Songs` (
+`id` int(11) NOT NULL,
+  `title` varchar(250) NOT NULL,
+  `artist` int(11) NOT NULL,
+  `album` int(11) NOT NULL,
+  `genre` int(11) NOT NULL,
+  `duration` varchar(8) NOT NULL,
+  `path` varchar(500) NOT NULL,
+  `albumOrder` int(11) NOT NULL,
+  `plays` int(11) NOT NULL
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=32 ;
 
 --
 -- Dumping data for table `Songs`
